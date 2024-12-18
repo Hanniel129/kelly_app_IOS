@@ -1,0 +1,18 @@
+workflows:
+  ios-build:
+    name: iOS Build
+    environment:
+      flutter: stable   # 使用 Flutter 的穩定版本
+      xcode: latest     # 使用最新版本的 Xcode
+    scripts:
+      - name: Install Flutter dependencies
+        script: flutter pub get
+      - name: Build iOS release
+        script: flutter build ios --release --no-codesign
+    artifacts:
+      - build/ios/iphoneos/*.app    # 輸出 .app 文件
+      - build/ios/iphoneos/*.ipa    # 輸出 .ipa 文件
+    publishing:
+      email:
+        recipients:
+          - "hanniel855100@gmail.com"
