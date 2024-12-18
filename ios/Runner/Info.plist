@@ -45,5 +45,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>CFBundleIdentifier</key>
+	<string>com.hanniel.kellyapp</string>
 </dict>
 </plist>
